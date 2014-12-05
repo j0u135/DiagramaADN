@@ -1,0 +1,164 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="appADN"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<link href="EstilosADN/fuente.css" rel="stylesheet" type="text/css">
+    <link href="EstilosADN/StyleADN.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="EstilosADN/jquery-ui.css">
+    <link rel="stylesheet" href="EstilosADN/bootstrap.min.css">
+    <link rel="stylesheet" href="EstilosADN/bootstrap-theme.min.css">
+    <link href="EstilosADN/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="EstilosADN/dis.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+
+
+
+	<link rel="stylesheet" href="js/jquery/ui-lightness/jquery-ui-1.10.2.custom.css" />
+	<link rel="stylesheet" href="css/color-picker.css" />
+	<link href="css/primitives.latest.css?207" media="screen" rel="stylesheet" type="text/css" />
+
+
+	<script type="text/javascript" src="js/jquery/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.10.2.custom.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.tinycolorpicker.js"></script>
+	<script type="text/javascript" src="js/primitives.min.js?207"></script>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/diagrama-identificadores.js"></script>
+
+
+
+
+  
+<title>Interfaz 9-1 - ADN</title>
+<script>
+	function agregar(){
+		var area = document.getElementById("area").value;
+		if(area!= "")
+			{
+				document.getElementById("GuardaArea").submit();
+			}
+	}
+</script>
+<script type="text/javascript">
+    function MM_swapImgRestore() { //v3.0
+        var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+    }
+    function MM_preloadImages() { //v3.0
+        var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+            var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+                if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+    }
+
+    function MM_findObj(n, d) { //v4.01
+        var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+            d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+        if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+        for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+        if(!x && d.getElementById) x=d.getElementById(n); return x;
+    }
+
+    function MM_swapImage() { //v3.0
+        var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+            if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+    }
+</script>
+</head>
+<body onload="MM_preloadImages('ImagenesADN/direccion-rollover.png','ImagenesADN/analisis-rollover.png','ImagenesADN/gerencia-rollover.png','ImagenesADN/planeacion-rollover.png','ImagenesADN/tablero-rollover.png','ImagenesADN/admon-rollover.png')" data-ng-controller="controllerADN">
+<div class="principal">
+	<div class="cabecera">
+		<div class="derecha">Fecha y Hora</div><div class="usuario">Usuario</div>
+	</div>
+	<div class="menuylogo">
+		<div id="menu">
+			<div class="menuicono"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('direccion','','ImagenesADN/direccion-rollover.png',1)"><img src="http://adn.disegnia.com/formularios/ImagenesADN/direccion-normal.png" name="direccion" border="0" id="direccion"></a></div>
+			<div class="menuicono"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('gerencia','','ImagenesADN/gerencia-rollover.png',1)"><img src="ImagenesADN/gerencia-normal.png" name="gerencia" border="0" id="gerencia"></a></div>
+			<div class="menuicono"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('planeacion','','ImagenesADN/planeacion-rollover.png',1)"><img src="ImagenesADN/planeacion-normal.png" name="planeacion" border="0" id="planeacion"></a></div>
+		    <div class="menuicono"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('tablero','','ImagenesADN/tablero-rollover.png',1)"><img src="ImagenesADN/tablero-normal.png" name="tablero" border="0" id="tablero"></a></div>
+			<div class="menuicono"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('admon','','ImagenesADN/admon-rollover.png',1)"><img src="ImagenesADN/admon-normal.png" name="admon" border="0" id="admon"></a></div>
+			<div class="menuicono"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('analisis','','ImagenesADN/analisis-rollover.png',1)"><img src="ImagenesADN/analisis-normal.png" name="analisis" border="0" id="analisis"></a></div>
+		</div>
+		<div class="logo"><img src="ImagenesADN/logo-adn.png"></div>
+	</div>
+	<div class="sidebar">
+	</div>
+	<div class="interfaz interfaz9">
+
+
+		<div class="barra" ng-show="bandera_editar">
+			<table align="center" width="100%" id="tablabarra" ng-show="bandera_editar">
+				<tbody>
+				<div ng-show="bandera_editar">
+					<tr ng-show="mostrarItem(item)" ng-repeat="item in myOptions.items">
+						<td><span id="nombre9">Título</span><input type="text" class="form-control" ng-model="item.title" ng-required></td>
+						<td><span id="nombre9">Descripción	</span><input type="text" class="form-control" ng-model="item.description" ng-required></td>
+						<td class="barraderecha" align="center"><span class="btn-eliminar" ng-click="$parent.deleteItem($index)">Eliminar</span></td>
+						<td align="center" ng-click="$parent.cerrarPanel()"><span class="btn-salir">Cerrar</span></td>
+					</tr>
+					<tr>
+						<td><span>Color</span><span>
+							<div id="colorPicker1">
+								<a class="color"><div class="colorInner"></div></a>
+								<div class="track"></div>
+								<ul class="dropdown"><li></li></ul>
+								<input type="hidden" class="colorInput" id="colorescondido" />
+							</div></span>
+						</td>
+						<div name="color">
+							<input type="hidden" ng-model="item.itemTitleColor" ng-required/>
+						</div>
+					</tr>
+				</div>
+
+				</tbody>		
+			</table>
+		</div>
+		<div class="barra" ng-show="bandera_asociar">
+			<table align="center" width="100%" id="tablabarra" ng-show="bandera_asociar">
+				<tbody>
+			 	<div ng-show="bandera_asociar">
+			 		<tr>
+				 		<div><label>Asociando Elementos A: {{myOptions.items[cursor_asociar].title}}</label></div>
+				 		<ul>
+							<li ng-repeat="item in myOptions.items[cursor_asociar].asociados">
+								<label ng-click="setCursorItem(item)" style="color: #fff; display: inline; background: {{myOptions.items[item].itemTitleColor}}; border: 1px solid; border-radius: 4px; padding: 1px; margin: 1px;">
+									{{myOptions.items[item].title.substring(0,1)}}{{myOptions.items[item].id}}	
+								</label>
+								<span ng-click="$parent.eliminarAsociado(myOptions.cursorItem, $index)" class="btn-X">X</span>
+				 			</li>
+				 		</ul>
+						<span class="btn-salir" ng-click="cerrarPanel()">Cerrar</span>
+					</tr>
+				</div>
+				</tbody>		
+			</table>
+		</div>
+		<div id="centerpanel"  style="overflow: hidden;">
+			<div bp-org-diagram data-options="myOptions" data-on-highlight-changed="onMyHighlightChanged()"  data-on-cursor-changed="onMyCursorChanged()" style="width: 100%; height: 680px;"></div>
+		</div>
+	</div>
+</div>
+<script>
+$('.bar-percentage[data-percentage]').each(function () {
+  var progress = $(this);
+  var percentage = Math.ceil($(this).attr('data-percentage'));
+  $({countNum: 0}).animate({countNum: percentage}, {
+    duration: 2000,
+    easing:'linear',
+    step: function() {
+      // What todo on every count
+    var pct = '';
+    if(percentage == 0){
+      pct = Math.floor(this.countNum) + '%';
+    }else{
+      pct = Math.floor(this.countNum+1) + '%';
+    }
+    progress.text(pct) && progress.siblings().children().css('width',pct);
+    }
+  });
+});
+</script>
+
+</body></html>

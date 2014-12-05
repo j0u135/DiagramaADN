@@ -1,0 +1,210 @@
+#colorPicker1
+{
+	width:          10px;
+	height:         10px;
+	position: relative;
+	clear: both;
+	margin: 0 auto 20px;
+}
+
+#colorPicker1 .track {
+	background:     #EFEFEF url(../images/text-color.png) no-repeat 50% 50%;
+	height:         150px;
+	width:          150px;
+	padding:        10px;
+	position:       absolute;
+	cursor:         crosshair;
+	float:          left;
+	left:           -71px;
+	top:            -71px;
+	display:        none;
+	border:         1px solid #ccc;
+	z-index:        10;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	border-radius: 150px;
+
+}
+
+#colorPicker1 .color {
+	width:          25px;
+	height:         25px;
+	padding:        1px;
+	border:         1px solid #ccc;
+	display:        block;
+	position:       relative;
+	z-index:        11;
+	background-color: #EFEFEF;
+	-webkit-border-radius: 27px;
+	-moz-border-radius: 27px;
+	border-radius: 27px;
+	cursor: pointer;
+}
+
+#colorPicker1 .colorInner {
+	width:          25px;
+	height:         25px;
+	-webkit-border-radius: 27px;
+	-moz-border-radius: 27px;
+	border-radius: 27px;
+}
+
+#colorPicker1 .dropdown {
+	list-style: none;
+	display: none;
+	width: 27px;
+	position: absolute;
+	top: 28px;
+	border: 1px solid #ccc;
+	left: 0;
+	z-index: 1000;
+}
+
+#colorPicker1 .dropdown li{
+	height: 25px;
+	cursor: pointer;
+}
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
+
+.btn-eliminar {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+	background-color:#f24537;
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
+	text-indent:0;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:normal;
+	font-style:normal;
+	height:25px;
+	line-height:25px;
+	width:86px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #810e05;
+}
+.btn-eliminar:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+	background-color:#c62d1f;
+}.btn-eliminar:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+.btn-salir {
+	-moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+	background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+	background-color:#3d94f6;
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
+	text-indent:0;
+	border:1px solid #337fed;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:normal;
+	font-style:normal;
+	height:25px;
+	line-height:25px;
+	width:86px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #1570cd;
+}
+.btn-salir:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+	background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+	background-color:#1e62d0;
+}.btn-salir:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+.btn-X {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+	background-color:#f24537;
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
+	text-indent:0;
+	border:1px solid #d02718;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:normal;
+	font-style:normal;
+	height:15px;
+	line-height:15px;
+	width:16px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #810e05;
+}
+.btn-X:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+	background-color:#c62d1f;
+}.btn-X:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="appADN">
+<head>
+	<title>Diagrama Organigrama ADN</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="js/jquery/ui-lightness/jquery-ui-1.10.2.custom.css" />
+	<link rel="stylesheet" href="css/color-picker.css" />
+	<link href="css/primitives.latest.css?207" media="screen" rel="stylesheet" type="text/css" />
+
+
+	<script type="text/javascript" src="js/jquery/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.10.2.custom.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery.tinycolorpicker.js"></script>
+	<script type="text/javascript" src="js/primitives.min.js?207"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/diagrama-organigrama.js"></script>
+
+	<script type="text/javascript">
+
+	</script>
+</head>
+
+<body data-ng-controller="controllerADN" style="font-size: 12px">
+	 <div class="animate-show" id="westpanel" ng-show="bandera_editar || bandera_asociar" style="width: 300px; height: 200px; padding: 10px; margin: 0px; border-style: dotted; font-size: 12px; border-color: grey; float: left; border-width: 1px;">
+	 	<div ng-show="bandera_editar">
+			<div ng-repeat="item in myOptions.items">
+				<div ng-show="mostrarItem(item)">
+					<div name="titulo">
+						<label>Título</label>
+						<input type="text" ng-model="item.title" ng-required/>
+					</div>
+					<div name="descripcion">
+						<label>Descripción</label>
+						<textarea ng-model="item.description" ng-required></textarea>
+					</div>
+					<div>
+						<button  ng-click="$parent.deleteItem($index)">Eliminar</button>
+					</div>
+					<div name="color">
+						<input type="hidden" ng-model="item.itemTitleColor" ng-required/>
+					</div>
+				</div>
+			</div>
+			<label>Color</label>
+			<div id="colorPicker1">
+				<a class="color"><div class="colorInner"></div></a>
+				<div class="track"></div>
+				<ul class="dropdown"><li></li></ul>
+				<input type="hidden" class="colorInput" id="colorescondido" />
+			</div>
+			<div>
+				<button  ng-click="bandera_editar = false">Salir</button>
+			</div>
+		</div>
+	 	<div ng-show="bandera_asociar">
+	 		<div><label>Asociando Identificadores A: {{myOptions.items[cursor_asociar].title}}</label></div>
+	 		<select ng-model="puesto_seleccionado" ng-options="item_identificador.title for item_identificador in items_identificadores"></select>
+	 		<div ng-click="asociar_identificador(myOptions.items, cursor_asociar, puesto_seleccionado)">Asociar</div>
+	 		<ul>
+				<li ng-repeat="item in myOptions.items[cursor_asociar].asociados">
+					<div style="color: #fff; display: inline; background: {{myOptions.items[cursor_asociar].itemTitleColor}}; border: 1px solid; border-radius: 4px; padding: 2px; width: 25px; height: 23px; margin: 2px;">
+						{{items_identificadores[item].title}}	
+					</div>
+					<span ng-click="eliminarAsociado(myOptions.cursorItem, $index)">Eliminar</span>
+	 			</li>
+	 		</ul>
+	 		<div>
+				<button  ng-click="bandera_asociar = false">Salir</button>
+			</div>
+		</div>
+	</div>
+	
+	 <div id="centerpanel"  style="overflow: hidden; padding: 0px; margin: 0px; border: 0px;">
+		  <div bp-org-diagram data-options="myOptions" data-on-highlight-changed="onMyHighlightChanged()"  data-on-cursor-changed="onMyCursorChanged()" style="width: 900px; height: 600px;"></div>
+	 </div>
+</body>
+</html>
